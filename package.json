@@ -31,6 +31,7 @@
     "build": "cross-env nuxt build",
     "deploy": "s3-deploy './dist/**' --cwd './dist/' --region ap-northeast-1 --bucket techtouch.jp --distId E2X6B7ZH5B1637 --invalidate '/*' --deleteRemoved",
     "start": "nuxt start",
+    "heroku-postbuild": "npm run build",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue,.ts --ignore-path .gitignore ."
