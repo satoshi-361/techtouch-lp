@@ -7,7 +7,7 @@
           <div class="-ml">
             <li class="item"><a href="#" class="link">サービス</a></li>
             <li class="item"><nuxt-link class="link" to="/cases">事例</nuxt-link></li>
-            <li class="item"><a href="#" class="link">お役立ち資料</a></li>
+            <li class="item -desktop"><a href="#" class="link">お役立ち資料</a></li>
             <li class="item"><nuxt-link class="link" to="/event">セミナー</nuxt-link></li>
             <li class="item"><nuxt-link to="/news" class="link">ニュース</nuxt-link></li>
             <li class="item -desktop"><a href="/about" class="link">会社情報</a></li>

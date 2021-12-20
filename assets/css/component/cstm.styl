@@ -104,12 +104,66 @@
 
       @media $desktop
         max-width: 280px;
+  > .inner > .title
+    margin-top: 30px;
+    margin-bottom: 20px !important;
+    font-family: "A-OTF Shin Go Pro";
+    font-weight: normal;
+    font-size: 20px !important;
+    line-height: 50px;
+    text-align: center;
+    color: #111;
+
+    @media $tablet
+      margin-top: 50px;
+      font-size: 26px !important;
 
   > .inner > .content
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+
+  > .inner > .content > .item
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.13);
+
+    @media $tablet
+      width: 30%;
+      margin: 0;
+
+  > .inner > .content > .item > img
+    width: 100%;
+
+  > .inner > .content > .item > .detail
+    padding: 7px;
+
+  > .inner > .content > .item > .detail > .title
+    font-family: "Noto Sans JP";
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    line-height: 30px;
+    color: #393939;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+  > .inner > .content > .item > .detail > .label1
+    font-family: "Source Han Sans JP";
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 35px;
+    text-align: left;
+    color: #393939;
+
+  > .inner > .content > .item > .detail > .label2
+    font-family: "Source Han Sans JP";
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: left;
+    color: #393939;
 
 .content-header
   margin: auto;

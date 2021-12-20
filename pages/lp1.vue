@@ -169,8 +169,35 @@
             <a class="btn -orange">お問い合わせ</a>
           </div>
         </div>
+        <h2 class="title">導入事例 / お客さまの声</h2>
         <div class="content">
-          <h2 class="title">導入・採用事例</h2>
+          <div class="item">
+            <img src="../assets/img/cstm_lp/fore-3.png">
+            <div class="detail">
+              <p class="title">富士通 SAP S/4HANA先行導入に<br>採用されました</p>
+              <p class="label1">富士通株式会社</p>
+              <p class="label2">業種：製造業・メーカー</p>
+              <p class="label2">従業員数：50,000人</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../assets/img/cstm_lp/fore-4.png">
+            <div class="detail">
+              <p class="title">富士通 SAP S/4HANA先行導入に<br>採用されました</p>
+              <p class="label1">富士通株式会社</p>
+              <p class="label2">業種：製造業・メーカー</p>
+              <p class="label2">従業員数：50,000人</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../assets/img/cstm_lp/fore-5.png">
+            <div class="detail">
+              <p class="title">富士通 SAP S/4HANA先行導入に<br>採用されました</p>
+              <p class="label1">富士通株式会社</p>
+              <p class="label2">業種：製造業・メーカー</p>
+              <p class="label2">従業員数：50,000人</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
