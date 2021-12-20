@@ -1,0 +1,37 @@
+.form-box
+  position: relative;
+  z-index: 0;
+
+  > .input,
+  > .select-box > .select,
+  > .textarea
+    color: $black;
+    font-size: 1.6rem;
+    padding: 12px 8px;
+    border: 1px solid lighten($gray, 30);
+    border-radius: 3px;
+    background-color: white;
+    width: 100%;
+
+    &.-error
+      color: $red;
+      border-color: $red;
+
+    &.-error:focus
+      border-color: $red;
+
+  > .input,
+  > .select-box > .select
+    line-height: 1;
+
+  > .textarea
+    line-height: 1.5;
+
+  > .input:focus,
+  > .select-box > .select:focus,
+  > .textarea:focus
+    border: 1px solid $primary-color;
+
+  > .input::placeholder,
+  > .textarea::placeholder
+    color: $gray;

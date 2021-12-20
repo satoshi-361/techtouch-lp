@@ -1,0 +1,43 @@
+.radio-list
+  > .item
+    display: block;
+    margin-top: 12px;
+
+  > .item > .input
+    display: none;
+
+  > .item > .label
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    padding-left: 20px;
+    position:relative;
+    margin-right: 20px;
+
+  > .item > .label::before
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 1px solid lighten($gray, 30);
+    background-color: $white;
+    border-radius: 50%;
+
+  > .item > .input[type=radio]:checked + .label::before
+    border: 1px solid $primary-color;
+
+  > .item > .input[type=radio]:checked + .label::after
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: $primary-color;
+    border-radius: 50%;

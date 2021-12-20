@@ -1,0 +1,59 @@
+.card-box
+  border: solid 1px lighten($gray, 30);
+  border-radius: 6px;
+  background-color: $white;
+  position: relative;
+
+  &:hover
+    @media $desktop
+      > .img
+        filter: brightness(1.1);
+
+      > .content > .description,
+      > .content > .date,
+      > .content > .label
+        color: $primary-color;
+
+  > .img
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    transition-duration: 0.3s;
+
+  > .label
+    font-size: 1.2rem;
+    line-height: 1;
+    color: $white;
+    background-color: darken($gray, 25);
+    padding: 4px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+  > .content
+    border-radius: 0 0 6px 6px;
+    background-color: $white;
+    padding: 24px;
+
+  > .content > .description
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.5;
+    transition-duration: 0.3s;
+
+  > .content > .date
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-top: 8px;
+    transition-duration: 0.3s;
+
+  > .content > .label
+    color: $gray;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin-top: 16px;
+    transition-duration: 0.3s;
+
+  > .content > .label > .ico-location
+    font-size: 1rem;
+    margin-right: 4px;

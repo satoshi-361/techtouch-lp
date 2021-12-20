@@ -1,0 +1,16 @@
+media($query)
+  @media $query
+    /{selector()}
+      {block};
+
+hover-element()
+  +media($desktop)
+    opacity: 1;
+    transition: opacity 300ms;
+    backface-visibility: hidden;
+
+    &:hover
+      opacity: 0.8;
+
+shadow()
+  box-shadow: 2px 4px 8px rgba(0,0,0,.2);

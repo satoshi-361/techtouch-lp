@@ -1,0 +1,115 @@
+.media-article
+    background-color: $white
+    border-radius: 6px
+    padding: 2.4rem
+    font-size: 1.4rem    
+    @media $desktop
+        margin-right: 3.2rem
+        font-size: 1.6rem
+
+    > .cover-image
+        margin 3.2rem 0
+    
+    h1 
+        font-size: 2.4rem
+        font-weight: bold
+        margin: 2rem 0 2.5rem
+        line-height: 1.5
+        @media $desktop 
+            margin: 4rem 0 2.5rem
+            font-size: 3.2rem
+        
+    h2
+        font-size: 2rem
+        font-weight: bold
+        margin: 4rem 0 2.5rem
+        line-height: 1.5
+        @media $desktop 
+           font-size: 2.4rem
+    
+    h3
+        font-size: 1.8rem
+        font-weight: bold
+        margin: 3.2rem 0 2.4rem
+        line-height: 1.5
+        @media $desktop 
+           font-size: 2rem
+
+    h4
+        font-size: 1.6rem
+        font-weight: bold
+        margin: 2.4rem 0 2.0rem
+        line-height: 1.5
+        @media $desktop 
+           font-size: 1.8rem
+
+    h5, h6
+        font-size: 1.5rem
+        font-weight: bold
+        margin: 2.0rem
+        line-height: 1.5
+        @media $desktop 
+           font-size: 1.6rem
+
+    > div > img
+        margin 1.6rem 0
+    
+    p
+        line-height: 2
+        margin: 3.2rem 0
+    
+    ul 
+        margin: 2.0rem 0
+        padding-left:  3.2rem
+        > li
+            list-style: disc
+            line-height: 2
+    
+    ol 
+        margin: 2.0rem 0
+        padding-left:  3.2rem
+        > li
+            list-style-type: decimal
+            line-height: 2
+    
+    a
+        color: $primary-color
+        &:hover {
+            text-decoration: underline;
+        }
+
+    pre
+        padding: 3.2rem 1.6rem 3.2rem 3.2rem
+        background-color: rgb(247, 246, 243);
+        line-height: 2
+    
+    blockquote 
+        position: relative;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        font-style: italic;
+        color: darken($gray, 20);
+        background: lighten($gray,35);
+　　
+
+    blockquote:before
+        display: inline-block;
+        position: absolute;
+        top: -2.4rem;
+        left: 0;
+        content: "“";
+        font-family: FontAwesome;
+        color: lighten($gray, 10);
+        font-size: 12rem;
+        line-height: 1;
+        font-weight: 900;
+
+    blockquote p 
+        position: relative;
+        padding: 0;
+        margin: 1rem 0;
+        z-index: 3;
+        line-height: 1.7;
+    
+    
+    

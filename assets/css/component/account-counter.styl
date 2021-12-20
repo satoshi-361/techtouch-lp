@@ -1,0 +1,59 @@
+.account-counter
+  background-color: $secondary-color;
+  color: $black;
+  padding: 8px 16px;
+  border-radius: 6px 0 0 6px;
+  font-feature-settings: "palt";
+  shadow();
+
+  @media $desktop
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  > .inner
+    display: flex;
+    align-items: center;
+
+    @media $desktop
+      display: block;
+
+  > .inner > .label
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-right: 8px;
+
+    @media $desktop
+      font-size: 1.4rem;
+      margin-right: 0;
+
+  > .inner > .label > .date
+      display: block;
+      font-size: 1rem;
+      text-align: right;
+
+      @media $desktop
+        display: none;
+
+  > .inner > .number
+    font-size: 4rem;
+    font-family: $din;
+    font-weight: $medium;
+    line-height: 1;
+    letter-spacing: -0.05em;
+
+    @media $desktop
+      font-size: 4.6rem;
+      margin-bottom: 16px;
+
+  > .inner > .date
+    display: none;
+
+    @media $desktop
+      display: block;
+      font-size: 1.2rem;
+      line-height: 1;

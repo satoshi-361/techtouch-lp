@@ -1,0 +1,20 @@
+.text-link
+  color: $primary-color;
+  font-size: 1.6rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  hover-element();
+
+  &.-careers
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+
+    @media $desktop
+      text-align: left;
+      margin-top: 12px;
+
+  > .img
+    width: 14px;
+    margin-left: 4px;

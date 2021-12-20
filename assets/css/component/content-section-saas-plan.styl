@@ -1,0 +1,99 @@
+.content-section-saas-plan
+  width: 100%;
+  background-color: $white;
+
+  &.-gray
+    background-color: lighten($gray, 40);
+
+  .mobile
+    display: block;
+
+    @media $desktop
+      display: none;
+
+  .desktop
+    display: none;
+
+    @media $desktop
+      display: block;
+
+  &.-gray
+    background-color: lighten($gray, 40);
+
+  > .inner
+    padding: 64px 24px;
+
+    @media $desktop
+      max-width: 1040px;
+      padding: 80px 0;
+      margin: auto;
+      overflow: auto;
+
+    &.-noPadding
+      padding-top: 0;
+      padding-bottom: 0;
+
+  > .inner > .title
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+    color: darken($gray, 25);
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 48px;
+
+    @media $desktop
+      font-size: 3.2rem;
+      margin-bottom: 64px;
+
+    &.-multiple
+      line-height: 1.5
+
+  > .inner > .title .blue
+    color: $primary-color;
+
+  > .inner > .title .smallText
+    font-size: 1.3rem;
+
+    @media $desktop
+      font-size: 2.2rem;
+
+  > .inner > .title > br
+    display: none;
+
+    @media $desktop
+      display: inline;
+
+  > .inner .subTitle
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 12px;
+
+    @media $desktop
+      margin-top: -28px;
+
+    &.-before
+      color: darken($gray, 25);
+
+    &.-after
+      color: $primary-color;
+      font-weight: bold;
+
+  > .inner .arrow
+    display: block;
+    width: 40%;
+    margin: 24px auto;
+
+  > .inner .arrow02
+    display: block;
+    width: 40%;
+    margin: 48px auto;
+
+    @media $desktop
+      width: 240px;
+      margin: 64px auto;
+
+  img.-before
+    display: block;
+    width: 60%;
+    margin: auto;

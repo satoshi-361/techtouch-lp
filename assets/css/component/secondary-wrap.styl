@@ -1,0 +1,82 @@
+.secondary-wrap
+  background-color: lighten($gray, 40);
+
+  > .inner
+    padding: 64px 24px;
+    margin-top: 48px;
+
+    @media $desktop
+      max-width: 640px;
+      padding: 80px 0;
+      margin: 64px auto 0;
+
+    &.-wide
+      @media $desktop
+        max-width: 1040px;
+
+  > .inner > .title
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 48px;
+
+    @media $desktop
+      font-size: 3.2rem;
+      margin-top: 120px;
+      margin-bottom: 64px;
+
+    &:first-of-type
+      margin-top: 0;
+
+      @media $desktop
+        margin-top: 0;
+
+  > .inner > .content > .description
+    color: darken($gray, 25);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+
+    @media $desktop
+      margin-bottom: 32px;
+      text-align: center;
+
+  > .inner > .content > .btn
+    margin: 32px auto 0;
+
+  > .inner > .content > .text
+    color: darken($gray, 25);
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-top: 24px;
+
+    &:first-of-type
+      margin-top: 0;
+
+    @media $desktop
+      text-align: center;
+
+  > .inner > .content > .text > .link
+    color: $primary-color;
+    hover-element();
+
+  > .inner > .content > .text > br
+    display: none;
+
+    @media $desktop
+      display: inline;
+
+  > .inner > .content > .note
+    font-size: 1.4rem;
+    line-height: 1.7;
+
+    @media $desktop
+      line-height: 1;
+      text-align: center;
+
+  > .inner > .content > .note > .link
+    color: $primary-color;
+    hover-element();

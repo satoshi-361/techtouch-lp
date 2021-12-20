@@ -1,0 +1,16 @@
+.select-box
+  position: relative;
+  z-index: 0;
+
+  > i
+    color: darken($gray, 25);
+    font-size: 2.8rem;
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    transform-origin: 0px 0px;
+
+    &::before
+      display: block;
+      transform: scale(0.6);

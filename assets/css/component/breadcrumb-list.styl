@@ -1,0 +1,40 @@
+.breadcrumb-list
+  display:block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow-scrolling: touch;
+  white-space: nowrap;
+  margin: 48px 0 -48px;
+  padding: 24px 24px 0;
+
+  @media $desktop
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+    margin: 64px auto -80px;
+    padding: 24px 0 0;
+
+  > .item
+    color: $gray;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: inline;
+
+  > .item > .link
+    font-weight: bold;
+
+    @media $desktop
+      &:hover
+        text-decoration: underline;
+
+  > .item > i
+    font-size: 1rem;
+    margin: 0 8px;
+
+  > .item > .current
+    @media $desktop
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 510px;
+      text-overflow: ellipsis;

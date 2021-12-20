@@ -1,0 +1,57 @@
+.footer-section
+  width: 100%;
+  color: darken($gray, 25);
+  background-color: white;
+  margin-top: auto;
+
+  @media $desktop
+    overflow: auto;
+
+  > .inner
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 32px 0 0;
+
+    @media $desktop
+      text-align: left;
+      max-width: 1040px;
+      padding: 52px 0;
+      margin: auto;
+
+  > .inner > .heading
+    margin-bottom: 24px;
+
+    @media $desktop
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+
+  > .inner > .heading > .logo
+    display: inline-block;
+
+  > .inner > .heading > .logo > img
+    width: 120px;
+    margin-bottom: 8px;
+
+    @media $desktop
+      width: 152px;
+      margin-bottom: 0;
+      margin-right: 12px;
+
+  > .inner > .heading > .subHeading
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+
+  > .copyright
+    color: white;
+    background-color: $primary-color;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $regular;
+    line-height: 1;
+    text-align: center;
+    padding: 6px 0;
+
+    @media $desktop
+      padding: 8px 0;

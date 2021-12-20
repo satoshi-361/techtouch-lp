@@ -1,0 +1,29 @@
+.detail-list
+  font-size: 1.4rem;
+
+  > .item
+    margin-bottom: 8px;
+    padding: 16px;
+
+    &:nth-child(odd)
+      background-color: $white;
+
+    &:last-of-type
+      margin-bottom: 0;
+
+  > .item > .inner
+    @media $desktop
+      display: flex;
+
+  > .item > .inner > .heading
+    font-weight: bold;
+    line-height: 2;
+
+    @media $desktop
+      flex: 0 0 20%;
+
+  > .item > .inner > .content
+    line-height: 2;
+
+    @media $desktop
+      flex: 0 0 80%;

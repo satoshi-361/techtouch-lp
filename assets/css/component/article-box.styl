@@ -1,0 +1,133 @@
+.article-box
+  h2, h3, h4, .excerpt
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    position: relative;
+
+  h2
+    font-size: 2.4rem;
+    margin: 64px 0 32px;
+
+  h3
+    font-size: 2.0rem;
+    color: $primary-color;
+    margin-bottom: 32px;
+    padding-left: 20px;
+
+    &::before
+      content:"";
+      display: inline-block;
+      width: 14px;
+      height: 2px;
+      background-color: $primary-color;
+      position: absolute;
+      top: 12px;
+      left: 0;
+
+  h4
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+
+  b
+    font-weight: bold;
+
+  p
+    font-size: 1.6rem;
+    line-height: 2;
+    margin: 32px 0;
+
+  .excerpt
+    font-size: 2.4rem;
+    font-style: italic;
+    color: $primary-color;
+    margin: 64px 0 32px;
+
+  .heading
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $primary-color;
+    display: block;
+    margin: 64px 0 -64px;
+
+  .annotation
+    font-size: 1.2rem;
+    color: $gray;
+
+  ul,
+  ol
+    font-size: 1.6rem;
+    line-height: 2;
+    margin: 32px 0;
+
+  ul > li,
+  ol > li
+    margin: 8px 0 8px 1.5em;
+
+
+  ul > li
+    list-style-type: disc;
+
+  ol > li
+    list-style-type: decimal;
+
+  a
+    color: $primary-color;
+    font-size: 1.6rem;
+    line-height: 2;
+
+    @media $desktop
+      &:hover
+        text-decoration: underline;
+
+  figure
+    margin-bottom: 32px;
+
+  figcaption
+    color: $gray;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin-top: -20px;
+
+  img
+    display: block;
+    border-radius: 6px;
+    margin: 32px 0;
+
+  .video
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin: 32px 0;
+
+  .video > iframe
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+
+  .point-box
+    border-bottom: solid 1px $gray;
+
+    &:last-of-type
+      border-bottom: none;
+
+    > p
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-top: 32px;
+      margin-bottom: 8px;
+
+    &:first-of-type > p
+      margin-top: 64px;
+
+    > ul
+      font-size: 1.3rem;
+      margin-top: 0;
+
+    > ul > li
+      margin: 2px 0 2px 1.5em;

@@ -1,0 +1,33 @@
+.hero-message-about
+  > .heading
+    font-size: 3.4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 24px;
+
+    @media $desktop
+      font-size: 5.0rem;
+      line-height: 1;
+      margin-bottom: 32px;
+
+  > .heading > br
+    @media $desktop
+      display: none;
+
+  > .subheading
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+    font-size: 2.0rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 40px;
+
+    @media $desktop
+      font-size: 2.8rem;
+      margin-bottom: 48px;
+
+  > .content
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-top: 24px;

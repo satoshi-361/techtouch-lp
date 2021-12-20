@@ -1,0 +1,31 @@
+.hero-section-merit
+  width: 100%;
+  padding: 40px 24px;
+  margin: 48px auto 0;
+
+  @media $desktop
+    max-width: 1040px;
+    padding: 72px 0;
+    margin: 64px auto 0;
+
+  > .inner
+    position: relative;
+
+    @media $desktop
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+  > .inner > .hero-message-merit
+    @media $desktop
+      flex: 1 0 480px;
+
+  > .inner > .img
+    width: 100%;
+    margin-top: 24px;
+
+    @media $desktop
+      max-width: 640px;
+      position: absolute;
+      top: -64px;
+      right: 0;

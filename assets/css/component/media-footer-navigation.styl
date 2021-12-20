@@ -1,0 +1,52 @@
+.media-footer-navigation
+  color: darken($gray, 25);
+  text-align: left;
+
+  > .item
+    font-size: 1.4rem;
+    border-top: 1px solid lighten($gray, 30);
+    padding: 1.2rem
+
+    @media $desktop
+      border-top: none;
+      margin-bottom: 16px;
+      padding: 0
+
+    &:last-child
+      @media $desktop
+        margin-bottom: 0;
+
+    &.-desktop
+      display: none;
+
+      @media $desktop
+        display: block;;
+
+  > .item > .link
+    @media $desktop
+      display: inline;
+      border-radius: 3px;
+      padding: 0px;
+      transition: color 300ms;
+      backface-visibility: hidden;
+      color: $black
+
+      &:hover
+        color: $gray
+
+  > .item > .link > i
+    font-size: 1.2rem;
+
+    @media $desktop
+      font-size: 1rem;
+      margin-left: 4px;
+
+  > .item > .logo
+    width: 62px;
+    display: block;
+    margin: 16px auto;
+
+    @media $desktop
+      width: 80px;
+      margin-left: 6px;
+  

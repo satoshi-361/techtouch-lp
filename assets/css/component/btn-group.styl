@@ -1,0 +1,16 @@
+.btn-group
+  @media $desktop
+    display: flex;
+    justify-content: center;
+
+  > .btn
+    margin-bottom: 16px;
+
+    &:last-child
+      margin-bottom: 0;
+
+    @media $desktop
+      margin-right: 40px;
+
+      &:last-child
+        margin-right: 0;

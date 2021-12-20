@@ -1,0 +1,52 @@
+service:
+  name: contact-api
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+  serverless-offline:
+    port: 4000
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-northeast-1
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - ses:SendEmail
+      Resource: '*'
+  apiGateway:
+    minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+    CAPTCHA_SITE_SECRET: "6LdGnMwUAAAAABv8LGK8NQIOkcB1b1r77ROyVZN7"
+
+functions:
+  contactLp:
+    handler: src/handler.contact
+    environment:
+      SLACK_HOOK_URL: https://hooks.slack.com/services/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
+      HEADLINE_TEXT: "LPから新着の問い合わせが届きました"
+      MAIL_TITLE: "【Techtouch】お問い合わせありがとうございます"
+      SF_CATEGORY: "お問い合わせ"
+    events:
+      - http:
+          method: post
+          path: contact-lp
+          cors: true
+  seminar:	
+    handler: src/handler.seminar	
+    environment:	
+      SLACK_HOOK_URL: https://hooks.slack.com/services/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
+    events:	
+      - http:	
+          method: post	
+          path: seminar
+          cors: true

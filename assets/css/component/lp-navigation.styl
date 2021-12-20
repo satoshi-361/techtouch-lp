@@ -1,0 +1,174 @@
+.header-section
+    justify-content: unset !important;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.07);
+
+.lp-navigation
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+
+  @media $desktop
+    font-size: 1.3rem;
+    letter-spacing: inherit;
+
+  > div 
+    display: flex
+    align-items: center
+
+    &.-ml
+      margin-left: 15px
+
+    @media $desktop
+      &.-ml
+        margin-left: 25px    
+
+  > div > .item
+    &.-desktop
+      display: none;
+
+    @media $desktop
+      margin-right: 20px;
+
+      &.-desktop
+        display: block;
+
+  > div > .item > .link
+    display: flex;
+    align-items: center;
+    padding: 6px 4px;
+    border-radius: 3px;
+    font-family: "Noto Sans JP";
+    font-weight: normal;
+    text-align: left;
+    color: #0c0c0c;
+
+
+    @media $desktop
+      padding: 6px;
+      transition: background-color 300ms;
+      backface-visibility: hidden;
+
+      &:hover
+        background-color: lighten($gray, 35)
+
+    &.-btn
+      width: 80px;
+      height: 24px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 6px;
+
+      &.-blue
+        color: $primary-color;
+        border: solid 1px $primary-color;
+        letter-spacing: -0.1rem;
+
+      &.-orange
+        color: $white;
+        background-color: $orange;
+      
+      &.-black
+        color: $white;
+        background-color: $black;
+
+      @media $desktop
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        display: inline;
+        padding: 6px;
+        margin-left: 0;
+        border-radius: 3px;
+        transition: background-color 300ms;
+        backface-visibility: hidden;
+
+        &.-blue
+          color: darken($gray, 25);
+          border: none;
+          letter-spacing: inherit;
+
+        &.-orange
+          color: darken($gray, 25);
+          background-color: inherit;
+        
+        &.-black
+          color: darken($gray, 25);
+          background-color: inherit;
+
+        &:hover
+          background-color: lighten($gray, 35)
+
+  > div > .item > .link > i
+    font-size: 1.1rem;
+    margin-left: 4px;
+
+.footer-section
+  > .footer-bg 
+      background-image: url(../assets/img/cstm_lp/footer_bg.png);
+
+  > .footer-bg > .inner 
+      background: #0974e890;
+
+  > .footer-bg > .inner > p 
+      margin-bottom: 40px;
+      padding-top: 40px;
+      font-family: "A-OTF Shin Go Pro";
+      font-weight: normal;
+      font-size: 22px;
+      text-align: center;
+      line-height: 50px;
+      color: $white;
+
+      @media $desktop
+        margin-bottom: 70px;
+        padding-top: 70px;
+        font-size: 30px;
+ 
+  > .footer-bg > .inner > .btn-group
+      max-width 1040px;
+      margin: 40px auto 0 auto;
+      padding-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;   
+
+      @media $desktop
+        margin-top: 70px;
+        padding-bottom: 70px;   
+
+  > .footer-bg > .inner > .btn-group .btn
+      width: 140px;
+      margin: 0 auto;
+      border: 2px solid $white;
+      border-radius: 4px;
+      font-family: "Source Han Sans JP";
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 50px;
+      text-align: center;
+      color: $white;
+
+      @media $desktop
+        font-size: 20px;
+        border: 1px solid $white;
+    
+      &.-active 
+        background-color: $white;
+        color: #0974e8;
+
+
+.footer-navigation
+  font-family: "Source Han Sans JP";
+
+  > .item
+    &.-sub-title
+      font-weight: bold;
+      font-size: 16px;
+      color: #404040;
+      text-decoration: underline;
+

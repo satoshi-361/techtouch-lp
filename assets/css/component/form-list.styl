@@ -1,0 +1,35 @@
+.form-list
+  margin-bottom: 32px;
+
+  @media $desktop
+    width: 480px;
+    margin: 0 auto;
+
+  > .item
+    margin-bottom: 32px;
+
+  > .item > .content
+
+  > .item > .content > .heading
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 12px;
+
+    &.-required
+      &::after
+        content: '必須';
+        color: $white;
+        background-color: $red;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 2px;
+        border-radius: 3px;
+        margin-left: 4px;
+
+  > .item > .content > .form-box
+    @media $desktop
+      flex: 0 1 100%;
+
+  > .item > .content > .form-box > .textarea
+    height: 120px;

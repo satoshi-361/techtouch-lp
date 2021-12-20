@@ -1,0 +1,43 @@
+.client-detail-box
+  padding: 16px;
+  background-color: $white;
+  border-radius: 6px;
+  margin: 64px 0;
+
+  @media $desktop
+    display:flex;
+    align-items: center;
+
+  > .logo
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+
+    @media $desktop
+      flex: 0 0 160px;
+
+  > .content
+    @media $desktop
+      margin-left: 8px;
+
+  > .content > .name,
+  > .content > .description,
+  > .content > .url,
+  > .content > .note
+    color: darken($gray, 25);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+
+  > .content > .name
+    font-weight: bold;
+
+  > .content > .url
+    color: $primary-color;
+
+    @media $desktop
+      &:hover
+        text-decoration: underline;
+
+  > .content > .note
+    color: $gray;

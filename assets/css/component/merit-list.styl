@@ -1,0 +1,138 @@
+.merit-list
+  &.-second
+    margin: -32px 0;
+
+    @media $desktop
+      margin: -40px 0 0;
+
+  > .item
+    padding: 32px 0
+
+    @media $desktop
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 0;
+
+    &:last-child
+      @media $desktop
+        padding-bottom: 0;
+
+    &.-rtl
+      @media $desktop
+        flex-direction: row-reverse;
+
+  > .item > .content
+    margin-bottom: 32px;
+
+    @media $desktop
+      margin-bottom: 0;
+      flex: 0 0 480px;
+
+  > .item > .content > .number
+    color: $primary-color;
+    font-size: 8rem;
+    font-family: $din;
+    font-weight: $medium;
+    line-height: 1;
+    margin-bottom: 24px;
+
+    @media $desktop
+      font-size: 10rem;
+      margin-bottom: 32px;
+
+  > .item > .content > .title
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 24px;
+
+    @media $desktop
+      font-size: 3.2rem;
+      margin-bottom: 32px;
+
+  > .item > .content > .title > br
+    display: none;
+
+    @media $desktop
+      display: inline;
+
+  > .item > .content > .description
+    color: darken($gray, 25);
+    font-size: 1.4rem;
+    line-height: 2;
+
+  > .item > .imgBox
+    text-align: center;
+
+    @media $desktop
+      flex: 0 1 100%;
+      display: flex;
+      align-items: center;
+
+      &.-left
+        justify-content: flex-start;
+
+      &.-right
+        justify-content: flex-end;
+
+      &.-center
+        justify-content: center;
+
+
+  > .item > .imgBox > .img
+    width: 100%;
+
+    &.-merit01
+      @media $desktop
+        max-width: 480px;
+
+    &.-merit02
+      max-width: 70%;
+
+      @media $desktop
+        max-width: 340px;
+
+    &.-merit03
+      @media $desktop
+        max-width: 480px;
+
+    &.-merit04
+      max-width: 70%;
+
+      @media $desktop
+        max-width: 420px;
+
+    &.-merit05
+      @media $desktop
+        max-width: 500px;
+
+    &.-merit06
+      max-width: 70%;
+
+      @media $desktop
+        max-width: 440px;
+
+    &.-merit07
+      @media $desktop
+        max-width: 450px;
+
+    &.-merit08
+      max-width: 70%;
+
+      @media $desktop
+        max-width: 380px;
+
+    &.-merit09
+      max-width: 70%;
+
+      @media $desktop
+        max-width: 380px;
+
+  & +.btn
+    margin-top: 8px;
+
+    @media $desktop
+      margin-top: 40px;

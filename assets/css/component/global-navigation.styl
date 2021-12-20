@@ -1,0 +1,80 @@
+.global-navigation
+  font-size: 1rem;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media $desktop
+    font-size: 1.3rem;
+    letter-spacing: inherit;
+
+  > .item
+    &.-desktop
+      display: none;
+
+    @media $desktop
+      margin-left: 12px;
+
+      &.-desktop
+        display: block;
+
+  > .item > .link
+    color: darken($gray, 25);
+    display: flex;
+    align-items: center;
+    padding: 6px 4px;
+    border-radius: 3px;
+
+    @media $desktop
+      padding: 6px;
+      transition: background-color 300ms;
+      backface-visibility: hidden;
+
+      &:hover
+        background-color: lighten($gray, 35)
+
+    &.-btn
+      width: 80px;
+      height: 24px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 6px;
+
+      &.-blue
+        color: $primary-color;
+        border: solid 1px $primary-color;
+        letter-spacing: -0.1rem;
+
+      &.-orange
+        color: $white;
+        background-color: $orange;
+
+      @media $desktop
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        display: inline;
+        padding: 6px;
+        margin-left: 0;
+        border-radius: 3px;
+        transition: background-color 300ms;
+        backface-visibility: hidden;
+
+        &.-blue
+          color: darken($gray, 25);
+          border: none;
+          letter-spacing: inherit;
+
+        &.-orange
+          color: darken($gray, 25);
+          background-color: inherit;
+
+        &:hover
+          background-color: lighten($gray, 35)
+
+  > .item > .link > i
+    font-size: 1.1rem;
+    margin-left: 4px;

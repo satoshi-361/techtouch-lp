@@ -1,0 +1,37 @@
+.content-list-saas-plan
+  @media $desktop
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  > .item
+    text-align: center;
+    margin-bottom: 32px;
+
+    &:last-child
+      margin-bottom: 0;
+
+    @media $desktop
+      flex: 0 0 320px;
+      margin-bottom: 0;
+
+  > .item > .img
+    width: 60%;
+
+    @media $desktop
+      width: 240px;
+
+  > .item > .content
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 16px;
+
+    @media $desktop
+      margin-top: 20px;
+
+    &.-before
+      color: darken($gray, 25);
+
+    &.-after
+      color: $primary-color

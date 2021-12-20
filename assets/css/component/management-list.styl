@@ -1,0 +1,48 @@
+.management-list
+  > .item
+    margin-bottom: 48px;
+
+    @media $desktop
+      display: flex;
+      align-items: center;
+      margin-bottom: 56px;
+
+    &:last-child
+      margin-bottom: 0;
+
+  > .item > .img
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+
+    @media $desktop
+      flex: 0 0 200px;
+      margin-right: 32px;
+
+  > .item > .inner
+    margin-top: 16px;
+
+    @media $desktop
+      margin-top: 0;
+
+  > .item > .inner > .heading
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+
+  > .item > .inner > .heading > .subheading
+    color: $gray;
+    font-size: 1.3rem;
+    font-weight: normal;
+    display: block;
+    margin-top: 8px;
+
+  > .item > .inner > .content
+    color: darken($gray, 25);
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 16px;

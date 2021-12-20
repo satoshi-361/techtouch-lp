@@ -1,0 +1,42 @@
+.speaker-list
+  > .item
+    margin-bottom: 32px;
+
+    &:last-of-type
+      margin-bottom: 0;
+
+    @media $desktop
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+  > .item > .img
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+
+    @media $desktop
+      flex: 0 0 160px;
+      margin-right: 32px;
+
+  > .item > .inner
+    margin-top: 16px;
+
+    @media $desktop
+      margin-top: 0;
+
+  > .item > .inner > .company
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 12px;
+
+  > .item > .inner > .name
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+
+  > .item > .inner > .profile
+    font-size: 1.4rem;
+    line-height: 2;

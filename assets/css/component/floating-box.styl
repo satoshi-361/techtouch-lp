@@ -1,0 +1,49 @@
+.floating-box
+  width: 50%;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+
+  @media $desktop
+    width: 360px;
+
+  > .closeBtn
+    background-color: lighten($gray, 30);
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    shadow();
+    cursor: pointer;
+    transition: 0.3s all;
+    z-index: 1;
+
+    &:hover
+      @media $desktop
+        background-color: lighten($gray, 25);
+
+
+  > .closeBtn > i
+    font-size: 12px;
+    width: 12px;
+    color: darken($gray, 25);
+
+  > .link
+    display: block;
+
+  .img
+    border-radius: 6px;
+    width: 100%;
+    shadow();
+    transition: 0.3s all;
+    z-index: 0;
+
+    &:hover
+      @media $desktop
+        filter: brightness(1.1);

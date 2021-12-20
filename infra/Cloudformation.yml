@@ -1,0 +1,137 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Launch a static website backed by an S3 bucket and served via https through cloudfront.
+  Assumes you have the following available already
+  * An address in mind (e.g. blog.example.com)
+  * An existing Route53 Hosted Zone for the domain
+  * A validated AWS ACM certificate arn for the desired web address which must be in eu-west-1
+Parameters:
+  HostedZoneID:
+    Description: >
+      The Hosted Zone ID in which to create the website's DNS record.
+    Type: AWS::Route53::HostedZone::Id
+    # Z2TDBTW168CK60: techoutch.jp
+    Default: "Z2TDBTW168CK60"
+  WebsiteAddress:
+    Description: >
+      The web address to host the website at. Must be a subdomain of the hostedzone.
+      Do not prefix with http e.g. blog.m-taylor.co.uk.
+    Type: "String"
+  S3BucketName:
+    Description: Name of the s3 bucket to create for website source files.
+    Type: "String"
+  CloudFrontOriginPath:
+    Description: Path to serve files from in the S3 bucket
+    Type: "String"
+    Default: ""
+  CloudFrontPriceClass:
+    Description: >
+      Price Class dictates which global locations CloudFront will serve content from. See the
+      pricing page for more details. The cheapest is PriceClass_100 and serves US, Canada & EU
+    Type: "String"
+    Default: "PriceClass_200"
+  TlsCertificateArn:
+    Description: >
+      ARN for the HTTPS certificate covering the domain in WebsiteAddress. This object must be
+      created in us-east-1, regardless of which region this CloudFormation template is launched.
+    Type: "String"
+    Default: "arn:aws:acm:us-east-1:080403282822:certificate/75dcc867-d8a0-4b1c-a102-b21bd93fa865"
+  WebsiteIndexDoc:
+    Description: Website index document
+    Type: "String"
+    Default: "index.html"
+  WebsiteErrorDoc:
+    Description: Website error document
+    Type: "String"
+    Default: "404.html"
+Resources:
+  S3Bucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Ref S3BucketName
+  S3BucketPolicy:
+    Type: "AWS::S3::BucketPolicy"
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Statement:
+          -
+            Sid: "AllowCloudFrontAccessIdentity"
+            Effect: "Allow"
+            Action:
+              - "s3:GetObject"
+            Resource: !Sub arn:aws:s3:::${S3Bucket}/*
+            Principal:
+              AWS: !Sub arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity ${CloudFrontOriginAccessIdentity}
+  R53Record:
+    Type: "AWS::Route53::RecordSet"
+    Properties:
+      Comment:
+        Fn::Join:
+          - ""
+          -
+            - "Alias CloudFront for "
+            -
+              Ref: "WebsiteAddress"
+      HostedZoneId: !Ref HostedZoneID
+      Type: A
+      Name: !Ref WebsiteAddress
+      AliasTarget:
+        DNSName: !GetAtt CFDistribution.DomainName
+        HostedZoneId: "Z2FDTNDATAQYW2"
+  CloudFrontOriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Ref AWS::StackName
+  CFDistribution:
+    Type: "AWS::CloudFront::Distribution"
+    DependsOn: "S3Bucket"
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - !Ref WebsiteAddress
+        Origins:
+          - DomainName: !GetAtt S3Bucket.DomainName
+            OriginPath: !Ref CloudFrontOriginPath
+            Id: S3BucketOrigin
+            S3OriginConfig:
+              OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${CloudFrontOriginAccessIdentity}
+        Comment:
+          Fn::Join:
+            - ""
+            -
+              - "CloudFront origin for "
+              -
+                Ref: "WebsiteAddress"
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          TargetOriginId: S3BucketOrigin
+          ForwardedValues:
+            QueryString: "false"
+            Cookies:
+              Forward: none
+          ViewerProtocolPolicy: redirect-to-https
+        CustomErrorResponses:
+        - ErrorCode: '403'
+          ResponsePagePath: "/index.html"
+          ResponseCode: '200'
+          ErrorCachingMinTTL: '300'
+        - ErrorCode: '404'
+          ResponsePagePath: "/index.html"
+          ResponseCode: '200'
+          ErrorCachingMinTTL: '300'
+        DefaultRootObject: index.html
+        Enabled: "true"
+        HttpVersion: "http2"
+        PriceClass: !Ref CloudFrontPriceClass
+        ViewerCertificate:
+          AcmCertificateArn: !Ref TlsCertificateArn
+          SslSupportMethod: sni-only
+Outputs:
+  URL:
+    Value: !Join [ "", [ "https://", Ref: "WebsiteAddress"]]

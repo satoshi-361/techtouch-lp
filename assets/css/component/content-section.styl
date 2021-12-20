@@ -1,0 +1,98 @@
+.content-section
+  width: 100%;
+  background-color: $white;
+
+  &.-gray
+    background-color: lighten($gray, 40);
+
+  > .inner
+    padding: 64px 24px;
+
+    @media $desktop
+      max-width: 1040px;
+      padding: 80px 0;
+      margin: auto;
+      overflow: auto;
+
+    &.-noPadding
+      padding-top: 0;
+      padding-bottom: 0;
+
+    &.-secondary
+      padding-top: 0;
+      padding-bottom: 80px;
+      margin-top: -16px;
+
+      @media $desktop
+        padding-bottom: 120px;
+        margin-top: -40px;
+
+    &.-narrow
+      @media $desktop
+        max-width: 640px;
+
+  > .inner > .title
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 48px;
+
+    @media $desktop
+      font-size: 3.2rem;
+      margin-bottom: 64px;
+
+    &.-blue
+      color: $primary-color;
+
+    &.-multiple
+      line-height: 1.5
+
+  > .inner > .title > .smallText
+    font-size: 1.3rem;
+
+    @media $desktop
+      font-size: 2.2rem;
+
+  > .inner > .title > .comma
+    display: inline;
+
+    @media $desktop
+      display: none;
+
+  > .inner > .title > br
+    display: none;
+
+    @media $desktop
+      display: inline;
+
+  > .inner > .subTitle
+    font-size: 1.2rem;
+    line-height: 1;
+    text-align: center;
+    color: $gray;
+    margin-top: -24px;
+
+    @media $desktop
+      margin-top: -28px;
+
+  > .inner > .content > .text
+    color: darken($gray, 25);
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    @media $desktop
+      text-align: center;
+
+  .article-list
+    margin-bottom: 32px;
+
+    @media $desktop
+      margin-bottom: 40px;
+
+    &+.btn
+      margin-bottom: 64px;
+
+      @media $desktop
+        margin-bottom: 80px;

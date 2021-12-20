@@ -1,0 +1,23 @@
+.article-list
+  @media $desktop
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: -40px;
+    margin-right: -40px;
+
+  > .item
+    display: flex;
+    margin-bottom: 16px;
+
+    &:last-child
+      margin-bottom: 0;
+
+    @media $desktop
+      max-width: 320px;
+      margin-top: 40px;
+      margin-right: 40px;
+      margin-bottom: 0;
+
+  > .item > .link
+    display: flex;

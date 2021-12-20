@@ -1,0 +1,38 @@
+.credo-list
+
+  @media $desktop
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 960px;
+
+  > .item
+    margin-bottom: 48px;
+
+    @media $desktop
+      flex: 0 1 50%;
+      margin-bottom: 64px;
+
+      &:nth-of-type(2n+1)
+        padding-right: 32px;
+
+      &:nth-of-type(2n)
+        padding-left: 32px;
+
+  > .item .title
+    font-feature-settings: "palt";
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-bottom: 12px;
+
+    @media $desktop
+      font-size: 3.2rem;
+      margin-bottom: 24px;
+
+  > .item .description
+    font-size: 1.4rem;
+    line-height: 1.7;
+
+    @media $desktop
+      font-size: 1.6rem;

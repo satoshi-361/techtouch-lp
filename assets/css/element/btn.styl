@@ -1,0 +1,78 @@
+.btn
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+  width: 248px;
+  height: 48px;
+  padding: 16px 0;
+  margin: auto;
+  border: none;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @media $desktop
+    font-size: 2.2rem;
+    width: 326px;
+    height: 56px;
+    margin: inherit;
+    border-radius: 28px;
+    transition: 0.3s all;
+
+  &.-center
+    margin: 0 auto;
+
+  &.-md
+    @media $desktop
+      font-size: 1.6rem;
+      width: 248px;
+      height: 48px;
+
+  &.-primary
+    background-color: $primary-color;
+    color: white;
+
+    @media $desktop
+      &:hover
+        border-color: darken($primary-color, 10);
+        background-color: darken($primary-color, 10);
+
+  &.-secondary
+    color: $primary-color;
+    border: solid 1px $primary-color;
+
+    @media $desktop
+      &:hover
+        color: darken($primary-color, 10);
+        border-color: darken($primary-color, 10);
+
+  &.-secondary-white
+    color: white;
+    border: solid 1px white;
+
+    @media $desktop
+      &:hover
+        color: darken(white, 20);
+        border-color: darken(white, 20);
+
+  &:disabled,
+  &.-disabled
+    background-color: lighten($gray, 25);
+    color: white;
+    opacity: 1;
+    cursor: default;
+
+    @media $desktop
+      &:hover
+        background-color: lighten($gray, 25);
+
+  &.-orange
+    background-color: $orange;
+    color: white;
+
+    @media $desktop
+      &:hover
+        border-color: darken($orange, 10);
+        background-color: darken($orange, 10);

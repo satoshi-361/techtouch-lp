@@ -1,0 +1,257 @@
+.hero-message-merit
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  @media $tablet
+    flex-direction: row;
+
+  > .img 
+    max-width: 300px;
+
+  > .heading
+    margin-top: 20px;
+    font-family: "Noto Sans JP";
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: left;
+    color: #393939;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+    @media $tablet
+      font-size: 30px;
+      
+  > .heading > br
+      display: none;
+ 
+      @media $tablet
+        display: block;
+    
+.merit-list
+  > .item > .content  
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 0 0 640px !important;
+
+  > .item > .content > .number
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+    border-radius: 50%;
+    font-family: 'Noto Sans JP';
+    text-align: center;
+    font-size: 3rem !important;
+    line-height: 2 !important;
+    background: linear-gradient(#2b8df6 0%, #0974e8 100%);
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    color: white !important;
+
+    @media $tablet
+      width: 108px;
+      height: 108px;
+      margin-right: 25px;
+      font-size: 5rem !important;
+
+    
+  > .item > .content > .title
+    font-family: "Noto Sans JP";
+    font-weight: bold;
+    font-size: 18px !important;
+    text-align: left;
+    color: #393939;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+    @media $tablet
+      font-size: 24px !important
+
+  > .item > .content > .title > br
+    display: block !important;
+
+    @media $tablet
+      display: none;
+
+  > .item > .content > .description
+    margin-left: 50px;
+    font-family: "Source Han Sans JP";
+    font-weight: normal;
+    font-size: 13px !important;
+    line-height: 30px;
+    text-align: left;
+    color: #393939;
+
+    @media $tablet
+      margin-left: 100px;
+      font-size: 16px !important;
+
+  > .item > .imgBox > .img
+    &.-merit10
+      max-width: 70%;
+
+      @media $desktop
+        max-width: 280px;
+
+.content-section
+  &.-light-blue
+    background-color: #f1f8fe;
+
+
+  > .item > .imgBox > .img
+    &.-merit10
+      max-width: 70%;
+
+      @media $desktop
+        max-width: 280px;
+
+  > .inner > .content
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+.content-header
+  margin: auto;
+
+  @media $desktop
+    max-width: 900px;
+
+  &.-bg-dark
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #3d4144;
+
+  &.-bg-dark > .title
+    color: $white;
+
+  &.-bg-dark > .description
+    color: $white;
+
+  &.-bg-dark > .btnBox
+    width: 100%;
+  
+  &.-bg-dark > .btnBox > a
+    margin: auto;
+    font-family: "Source Han Sans JP";
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: $white;
+
+    @media $tablet
+      font-size: 20px;
+
+  > .title
+    margin-bottom: 20px;
+    font-family: "A-OTF Shin Go Pro";
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    color: #0974e8;
+
+    @media $tablet
+      margin-bottom: 40px;
+      font-size: 26px;
+
+  > .description
+    margin-bottom: 25px;
+    font-family: "Source Han Sans JP";
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: left;
+    color: #393939;
+
+    @media $tablet
+      margin-bottom: 40px;
+      font-size: 16px;
+
+    &.-center
+      text-align: center;
+
+  > .imgBox
+    width: 100%;
+    text-align: center;
+
+  > .imgBox > img
+    width: 80%;
+    max-width: 400px;
+
+    @media $tablet
+      max-width: 700px;
+
+.cstm-list
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  @media $tablet
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+  > .item
+    width: 95%;
+    margin: 10px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media $tablet
+      width: 45%;
+      margin: 20px auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+    &.-box-shadow
+      box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.13);
+
+    &.-bg-white
+      background-color: $white;
+
+  > .item > .title
+    margin-bottom: 25px;
+    font-family: "Noto Sans JP";
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #393939;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+    @media $tablet
+      margin-bottom: 40px;
+      font-size: 22px;
+
+    &.-center
+      text-align: center;
+
+  > .item > .description
+    margin-bottom: 25px;
+    font-family: "Source Han Sans JP";
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: left;
+    color: #393939;
+
+    @media $tablet
+      margin-bottom: 40px;
+      font-size: 15px;
+
+  > .item > .imgBox
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+
+    @media $tablet
+      margin: 50px auto;
+
+  > .item > .imgBox > img
+    max-width: 80%;
+
+    @media $tablet
+      max-width: 300px;

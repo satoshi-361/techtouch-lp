@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    branches:
+      only:
+        - master
+    docker:
+      - image: circleci/node:10.15.0-browsers
+    steps:
+      - checkout
+      - run:
+         name: Set up env
+         command: |
+          yarn install
+      - run:
+         name: build
+         command: |
+          yarn run generate
+      - run:
+         name: Deployment
+         command: |
+          yarn run deploy
