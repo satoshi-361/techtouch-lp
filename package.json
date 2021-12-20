@@ -2,6 +2,9 @@
   "name": "techtouch-corp",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "14.17.0"
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/markdownit": "1.2.10",
